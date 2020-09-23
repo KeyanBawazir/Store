@@ -6,14 +6,14 @@
     <title>Products</title>
 </head>
 <body>
-    <div>
+    <h1>Products:</h1>
     {% for product in products %}
-        <div>
-            <h2>{{product.title}}</h2>
+    <ul>
+        <li>
+            <a href="{{product.get_absolute_url}}"><h2>{{product.title}}</h2></a>
             <p>{{product.description}}</p>
-        </div>
+        </li>
+    </ul>
     {% endfor %}
-    </div>
-  
 </body>
 </html>
