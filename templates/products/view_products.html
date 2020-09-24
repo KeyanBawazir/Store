@@ -10,7 +10,7 @@
     {% for product in products %}
     <ul>
         <li>
-            <a href="{{product.get_absolute_url}}"><h2>{{product.title}}</h2></a>
+            <a href="{% url 'product_details' product.pk %}"><h2>{{product.title}}</h2></a>
             <p>{{product.description}}</p>
         </li>
     </ul>
